@@ -1,0 +1,13 @@
+.card-title{
+  font-weight: 600;
+  font-size: 25px;
+}
+
+strong {
+  color: #E62429;
+  font-weight: 300;
+}
+
+.container{
+  margin-top: 200px;
+}

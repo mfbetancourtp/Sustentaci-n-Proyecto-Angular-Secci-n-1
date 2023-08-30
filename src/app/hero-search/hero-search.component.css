@@ -1,0 +1,21 @@
+.input-search{
+  max-width: 500px; /* Establece aquí el ancho máximo que desees */
+  margin: 0 auto 20px auto;
+}
+
+a {
+  width: 20%;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: column;
+}
+
+@media (min-width: 300px) and (max-width: 900px) {
+  a{
+    width: 80%;
+  }
+}

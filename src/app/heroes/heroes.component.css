@@ -1,0 +1,115 @@
+h2 {
+  color: #202020;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  max-width: 250px;
+}
+
+.input-add{
+  max-width: 500px; /* Establece aquí el ancho máximo que desees */
+  margin: 0 auto;
+}
+
+.heroes li {
+  position: relative;
+  cursor: pointer;
+
+}
+
+
+.heroes a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background-color: #E62429;
+  margin: 0.5em;
+  padding: 0.3em 0;
+  height: 2.6em;
+  border-radius: 4px;
+  display: block;
+  width: 250px;
+  font-weight: 600;
+}
+
+.heroes .badge {
+  font-size: small;
+  color: rgb(0, 0, 0);
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #E62429;
+  line-height: 1em;
+  position: relative;
+  left: 0px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: 0.8em;
+  border-radius: 4px 0 0 4px;
+  font-weight: bolder;
+}
+
+button.delete {
+  position: absolute;
+  left: 210px;
+  top: 5px;
+  background-color: #E62429;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button.delete:hover {
+  background-color: #ca0000;
+}
+
+button.delete:active{
+  background-color: #ff0000;
+}
+
+
+
+.lists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row;
+}
+
+
+.button-pressed {
+  background-color: #000000;
+  color: white;
+}
+
+/* Estilos normales del botón */
+.button-normal {
+  background-color: #E62429;
+  color: rgb(255, 255, 255);
+}
+
+@media (min-width: 300px) and (max-width: 900px) {
+
+  .lists {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1600px){
+  .container{
+    margin-left: 30px;
+  }
+
+  .lists {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

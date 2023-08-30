@@ -1,0 +1,42 @@
+<div class="container" *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <span for="hero-name">Hero name: </span>
+    <input id="hero-name" class="form-control input-detail" pattern="[^0-9]+" [class]="nameInput.valid ? 'input-valid' : 'input-invalid'" #nameInput="ngModel" required [(ngModel)]="hero.name" placeholder="Hero name"/>
+  </div>
+
+  <div>
+    <span for="hero-age">Hero age: </span>
+    <input id="hero-age" class="form-control input-detail" pattern="[0-9]{1,2}" [class]="ageInput.valid ? 'input-valid' : 'input-invalid'" #ageInput="ngModel" required [(ngModel)]="hero.age" placeholder="Hero age"/>
+  </div>
+
+  <div>
+    <span for="hero-weight">Hero weight: </span>
+    <input id="hero-weight" class="form-control input-detail" pattern="[0-9]*\.?[0-9]+" [class]="weightInput.valid ? 'input-valid' : 'input-invalid'" #weightInput="ngModel" required [(ngModel)]="hero.weight" placeholder="Hero weight"/>
+  </div>
+
+  <div>
+    <span for="hero-height">Hero height: </span>
+    <input id="hero-height" class="form-control input-detail" pattern="[0-9]*\.?[0-9]+" [class]="heightInput.valid ? 'input-valid' : 'input-invalid'" #heightInput="ngModel" required [(ngModel)]="hero.height" placeholder="Hero height"/>
+  </div>
+
+  <div>
+    <span for="hero-gender">Hero gender: </span>
+    <input id="hero-gender" class="form-control input-detail" pattern="[^0-9]+" [class]="genderInput.valid ? 'input-valid' : 'input-invalid'" #genderInput="ngModel" required [(ngModel)]="hero.gender" placeholder="Hero gender"/>
+  </div>
+
+  <div>
+    <span for="hero-strength">Hero strength: </span>
+    <input id="hero-strength" class="form-control input-detail" pattern="[0-9]*\.?[0-9]+" [class]="strengthInput.valid ? 'input-valid' : 'input-invalid'" #strengthInput="ngModel" required [(ngModel)]="hero.strength" placeholder="Hero strength"/>
+  </div>
+
+  <div>
+    <span for="hero-photo">Hero photo: </span>
+    <input id="hero-photo" class="form-control input-detail"  pattern="^(https?:\/\/)?[\w\-]+(\.[\w\-]+)+[/#?]?.*$" [class]="strengthInput.valid ? 'input-valid' : 'input-invalid'" #photoInput="ngModel" required [(ngModel)]="hero.photo" placeholder="Hero photo"/>
+  </div>
+  <div class="buttons">
+    <button type="button" class="btn btn-dark btn-lg button-back" (click)="goBack()">go back</button>
+    <button type="button" class="btn btn-dark btn-lg button-back" (click)="save()">save</button>
+  </div>
+</div>

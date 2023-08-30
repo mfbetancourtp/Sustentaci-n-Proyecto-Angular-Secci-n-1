@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center" *ngFor="let heroe of superHeroes">
+      <div class="card mt-5" style="width: 18rem;">
+        <div class="ratio ratio-4x3">
+          <img *ngIf="heroe.photo" [src]="heroe.photo" alt="Heroe Photo" class="card-img-top img-fluid">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{heroe.name}}</h5>
+          <p class="card-text"><strong>Age: </strong>{{heroe.age}}</p>
+          <p class="card-text"><strong>Weight: </strong>{{heroe.weight}}</p>
+          <p class="card-text"><strong>Height: </strong>{{heroe.height}}</p>
+          <p class="card-text"><strong>Gender: </strong>{{heroe.gender}}</p>
+          <p class="card-text"><strong>Strength: </strong>{{heroe.strength}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
