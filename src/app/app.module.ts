@@ -10,20 +10,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { HeroSearchComponent } from './hero-search/hero-search.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
+import { RestaurantSearchComponent } from './restaurant-search/restaurant-search.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 import { CardsComponent } from './cards/cards.component';
+import { FooterComponent } from './footer/footer.component';
+import { AcercaDeNosotrosComponent } from './acerca-de-nosotros/acerca-de-nosotros.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     DashboardComponent,
-    HeroDetailComponent,
-    HeroSearchComponent,
-    HeroesComponent,
-    CardsComponent
+    RestaurantDetailComponent,
+    RestaurantSearchComponent,
+    RestaurantComponent,
+    CardsComponent,
+    FooterComponent,
+    AcercaDeNosotrosComponent
   ],
   imports: [
     BrowserModule,

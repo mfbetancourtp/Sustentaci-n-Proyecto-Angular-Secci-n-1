@@ -1,10 +1,13 @@
-<h2 class="d-flex justify-content-center">Top Heroes</h2>
+
 <div class="heroes-menu">
-  <a *ngFor="let hero of heroes"
-      routerLink="/detail/{{hero.id}}">
-      <img *ngIf="hero.photo" [src]="hero.photo" width="400px" height="250px" alt="Heroe Photo">
+  <a *ngFor="let restaurant of restaurantes"
+      routerLink="/detail/{{restaurant.id}}">
+      <img *ngIf="restaurant.photo" [src]="restaurant.photo" width="400px" height="250px" >
   </a>
 </div>
+<!--<app-restaurant-search></app-restaurant-search>-->
 
-<app-hero-search></app-hero-search>
+
 <app-cards></app-cards>
+<app-footer></app-footer>
+

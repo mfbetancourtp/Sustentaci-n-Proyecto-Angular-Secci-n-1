@@ -1,4 +1,4 @@
-export interface Hero {
+export interface Restaurant {
   id: number;
   name: string;
   age: number | null;

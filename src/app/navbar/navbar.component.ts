@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  title:string = "Tour of Heroes";
-  logo:string = "https://www.freepnglogos.com/uploads/avengers-png-logo/image-avengers-logo-marvel-cinematic-universe-wiki-18.png";
+  title:string = "Carnes y Vinos de Argentina";
+  logo:string = "https://i.pinimg.com/564x/b7/31/be/b731be8b3511f426571133f47a12f6a8.jpg";
 }

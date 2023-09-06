@@ -1,0 +1,72 @@
+<h2 class="d-flex justify-content-center">Carta </h2>
+
+<div class=" mb-3 input-add">
+  <input id="new-restaurant-name" class="form-control mb-3" placeholder="Nombre del Plato" #restaurantName />
+  <input id="new-restaurant-age" class="form-control mb-3" placeholder="Descripción" #restaurantAge />
+  <input id="new-restaurant-weight" class="form-control mb-3" placeholder="Precio" #restaurantWeight />
+ <!-- <input id="new-restaurant-height" class="form-control mb-3" placeholder="Height" #restaurantHeight />
+  <input id="new-restaurant-gender" class="form-control mb-3" placeholder="Gender" #restaurantGender />
+  <input id="new-restaurant-strength" class="form-control mb-3" placeholder="Strength" #restaurantStrength />
+  <input id="new-restaurant-photo" type="file" accept="image/*" class="form-control mb-3" placeholder="Photo URL" (change)="handlePhotoChange($event)" />-->
+
+  <!-- Show the selected image preview -->
+  <div *ngIf="selectedPhoto" class="mb-3">
+    <img [src]="selectedPhoto" alt="Selected Photo" class="img-thumbnail">
+  </div>
+
+  <!-- (click) passes input values to add() and then clears the inputs -->
+  <button type="button" class="btn btn-outline-dark btn-lg add-button"
+          (click)="add(restaurantName.value, +restaurantAge.value, +restaurantWeight.value );
+          restaurantName.value=''; restaurantAge.value=''; restaurantWeight.value=''; "
+          (mousedown)="onMouseDown()" (mouseup)="onMouseUp()"
+          [class]="buttonClass">
+    Add plato
+  </button>
+</div>
+
+<div class="lists">
+
+  <ul class="cartas">
+    <div *ngIf="restaurantes.length === 0">
+      <p class="p-2 mb-4 bg-danger text-white">No hay cartas Disponibles!</p>
+    </div>
+
+    <li *ngFor="let restaurant of restaurantes">
+      <a class="d-flex align-items-center" routerLink="/detail/{{restaurant.id}}">
+        <span class="badge">{{restaurant.id}}</span> {{restaurant.name}}
+      </a>
+      <button type="button" class="delete" title="delete carta" (click)="delete(restaurant)">
+        <img src="https://img.icons8.com/?size=512&id=68064&format=png" width="20" height="20" alt="trash">
+      </button>
+    </li>
+  </ul>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let restaurant of restaurantes; index as i">
+              <td>{{i + 1 }}</td>
+              <td>{{restaurant.name}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer>
+
+
+
+
+
+

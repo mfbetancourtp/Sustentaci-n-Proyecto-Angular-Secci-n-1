@@ -1,6 +1,6 @@
-import { Hero } from "./hero";
+import { Restaurant } from "./restaurant";
 
-export const HEROES: Hero[] = [
+export const CARTAS: Restaurant[] = [
   { id: 1, name: 'Spiderman', age: 18, weight: 70, height: 175, gender: 'Male', strength: 150, photo: 'https://w.wallhaven.cc/full/lm/wallhaven-lm8682.jpg' },
   { id: 2, name: 'Iron man', age: 40, weight: 74, height: 180, gender: 'Male', strength: 200, photo: 'https://w.wallhaven.cc/full/k9/wallhaven-k978dm.jpg' },
   { id: 3, name: 'Hulk', age: 50, weight: 120, height: 210, gender: 'Male', strength: 500, photo: 'https://w.wallhaven.cc/full/49/wallhaven-491ygd.jpg' },

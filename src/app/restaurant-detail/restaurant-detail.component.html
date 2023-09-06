@@ -1,0 +1,42 @@
+<div class="container" *ngIf="restaurant">
+  <h2>{{restaurant.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{restaurant.id}}</div>
+  <div>
+    <span for="restaurant-name">Restaurant  name: </span>
+    <input id="restaurant-name" class="form-control input-detail" pattern="[^0-9]+" [class]="nameInput.valid ? 'input-valid' : 'input-invalid'" #nameInput="ngModel" required [(ngModel)]="restaurant.name" placeholder="Hero name"/>
+  </div>
+
+  <div>
+    <span for="restaurant-age">Restaurant  age: </span>
+    <input id="restaurant-age" type=""class="form-control input-detail" pattern="[0-9]{1,2}" [class]="ageInput.valid ? 'input-valid' : 'input-invalid'" #ageInput="ngModel" required [(ngModel)]="restaurant.age" placeholder="Hero age"/>
+  </div>
+
+  <div>
+    <span for="restaurant-weight">Restaurant  weight: </span>
+    <input id="restaurant-weight" class="form-control input-detail" pattern="[0-9]*\.?[0-9]+" [class]="weightInput.valid ? 'input-valid' : 'input-invalid'" #weightInput="ngModel" required [(ngModel)]="restaurant.weight" placeholder="Hero weight"/>
+  </div>
+
+  <div>
+    <span for="restaurant-height">Restaurant  height: </span>
+    <input id="restaurant-height" class="form-control input-detail" pattern="[0-9]*\.?[0-9]+" [class]="heightInput.valid ? 'input-valid' : 'input-invalid'" #heightInput="ngModel" required [(ngModel)]="restaurant.height" placeholder="Hero height"/>
+  </div>
+
+  <div>
+    <span for="restaurant-gender">Restaurant  gender: </span>
+    <input id="restaurant-gender" class="form-control input-detail" pattern="[^0-9]+" [class]="genderInput.valid ? 'input-valid' : 'input-invalid'" #genderInput="ngModel" required [(ngModel)]="restaurant.gender" placeholder="Hero gender"/>
+  </div>
+
+  <div>
+    <span for="restaurant-strength">Restaurant  strength: </span>
+    <input id="restaurant-strength" class="form-control input-detail" pattern="[0-9]*\.?[0-9]+" [class]="strengthInput.valid ? 'input-valid' : 'input-invalid'" #strengthInput="ngModel" required [(ngModel)]="restaurant.strength" placeholder="Hero strength"/>
+  </div>
+
+  <div>
+    <span for="restaurant-photo">Hero photo: </span>
+    <input id="restaurant-photo" class="form-control input-detail"  pattern="^(https?:\/\/)?[\w\-]+(\.[\w\-]+)+[/#?]?.*$" [class]="strengthInput.valid ? 'input-valid' : 'input-invalid'" #photoInput="ngModel" required [(ngModel)]="restaurant.photo" placeholder="Hero photo"/>
+  </div>
+  <div class="buttons">
+    <button type="button" class="btn btn-dark btn-lg button-back" (click)="goBack()">go back</button>
+    <button type="button" class="btn btn-dark btn-lg button-back" (click)="save()">save</button>
+  </div>
+</div>

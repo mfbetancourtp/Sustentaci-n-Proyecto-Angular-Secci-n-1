@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroService } from '../hero.service';
-import { Hero } from '../hero';
+import { RestaurantService } from '../restaurant.service';
+import { Restaurant } from '../restaurant';
 
 @Component({
   selector: 'app-cards',
@@ -8,16 +8,17 @@ import { Hero } from '../hero';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  superHeroes: Hero[] = [];
+  platoResta: Restaurant[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(private restaurantService: RestaurantService) { }
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getRestaurant();
   }
 
-  getHeroes(): void {
-    this.heroService.getHeroes()
-      .subscribe(heroes => this.superHeroes = heroes);
+  getRestaurant(): void {
+    this.restaurantService.getRestaurant()
+      .subscribe(restaurantes => this.platoResta = restaurantes);
+      console.log(this.platoResta)
   }
 }

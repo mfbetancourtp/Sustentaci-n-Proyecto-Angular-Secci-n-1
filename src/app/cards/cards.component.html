@@ -1,19 +1,62 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center" *ngFor="let heroe of superHeroes">
+  <!--<div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center" *ngFor="let restaurant of platoResta">
       <div class="card mt-5" style="width: 18rem;">
         <div class="ratio ratio-4x3">
-          <img *ngIf="heroe.photo" [src]="heroe.photo" alt="Heroe Photo" class="card-img-top img-fluid">
+          <img *ngIf="restaurant.photo" [src]="restaurant.photo" alt="Restaurant Photo" class="card-img-top img-fluid">
         </div>
         <div class="card-body">
-          <h5 class="card-title">{{heroe.name}}</h5>
-          <p class="card-text"><strong>Age: </strong>{{heroe.age}}</p>
-          <p class="card-text"><strong>Weight: </strong>{{heroe.weight}}</p>
-          <p class="card-text"><strong>Height: </strong>{{heroe.height}}</p>
-          <p class="card-text"><strong>Gender: </strong>{{heroe.gender}}</p>
-          <p class="card-text"><strong>Strength: </strong>{{heroe.strength}}</p>
+          <h5 class="card-title">{{restaurant.name}}</h5>
+          <p class="card-text"><strong>Age: </strong>{{restaurant.age}}</p>
+          <p class="card-text"><strong>Weight: </strong>{{restaurant.weight}}</p>
+          <p class="card-text"><strong>Height: </strong>{{restaurant.height}}</p>
+          <p class="card-text"><strong>Gender: </strong>{{restaurant.gender}}</p>
+          <p class="card-text"><strong>Strength: </strong>{{restaurant.strength}}</p>
+        </div>
+      </div>
+    </div>
+  </div>-->
+  <div class="container">
+    <h1 class="mt-4">Carnes y Vinos de Argentina</h1>
+  
+    <div class="row mt-4">
+      <!-- Empanadas Criollas -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/68/96/32/689632b143bb506e496856d22df0c7d5.jpg" class="card-img-top" alt="Empanadas Criollas">
+          <div class="card-body">
+            <h5 class="card-title">Empanadas Criollas</h5>
+            <p class="card-text">Deliciosas empanadas rellenas de carne de res, cebolla y especias argentinas.</p>
+            <p class="card-text">$10</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Asado Argentino -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/f9/b6/b6/f9b6b670fac72838259181b8f4073a02.jpg" class="card-img-top" alt="Asado Argentino">
+          <div class="card-body">
+            <h5 class="card-title">Asado Argentino</h5>
+            <p class="card-text">Nuestro corte estrella, un jugoso asado a la parrilla con chimichurri y papas asadas.</p>
+            <p class="card-text">$25</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Bife de Chorizo -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/af/25/43/af2543b92e2582d76acaf7f82faf16b2.jpg" class="card-img-top" alt="Bife de Chorizo">
+          <div class="card-body">
+            <h5 class="card-title">Bife de Chorizo</h5>
+            <p class="card-text">Un tierno corte de carne de res argentino, a la parrilla y servido con ensalada mixta.</p>
+            <p class="card-text">$30</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  
+
 </div>
